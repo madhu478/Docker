@@ -101,3 +101,20 @@ then we write configuration file i,e Dockerfile we will define the images create
 after writing the docker compose file then we will start container un the compose application then we will test our application in a docker environment 
 
 final step is to push the code back to git,and then we can distribute the containers on various available environments
+
+# Docker stacks
+
+in ypur application you might have front end web application and back end database server those components work together to serve up a single application this is where docker stack come in
+
+doing grouping together services  like a webserver and database together called stack in that way we deploy that stack as one unit we can manage it such as single unit .for that we write a yaml file to define the various services that make up on our application
+
+
+docker stack deploy -c stack1.yaml [stackname]  { -c tag is for compose file }
+
+docker stack services stack1
+
+# stack redeployment
+
+docker stack deploy -c stack1.yaml stack1
+
+docker stack deploy -c stack2.yaml stack1
