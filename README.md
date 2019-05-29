@@ -80,3 +80,14 @@ Docker swarm config is a configuration set that we can aply when we start a dock
 
 what this do is it lets us keep some configuration settings outside of docker images used for container
 
+
+that config file will be into running container 
+
+docker config create apacheports ports.conf
+
+
+docker config ls
+
+docker config ipspect --pretty apacheports
+
+docker service create --replicas 3 -p 8080:8080 --nbame corpwebsite --config source=apacheports,target=/etc/apache2/ports.conf,mode=0440 [image]
