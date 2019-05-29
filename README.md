@@ -91,3 +91,13 @@ docker config ls
 docker config ipspect --pretty apacheports
 
 docker service create --replicas 3 -p 8080:8080 --nbame corpwebsite --config source=apacheports,target=/etc/apache2/ports.conf,mode=0440 [image]
+
+# docker workflow
+
+we wiill begin by coding our application following which we will configure images that will provide sufficient dependencies required by our application to work better.
+
+then we write configuration file i,e Dockerfile we will define the images created in that dockerfile then we will define the services by writing docker-compose which takes responsibility of buildng the collaboration b/w applications that are running between multiple containers
+
+after writing the docker compose file then we will start container un the compose application then we will test our application in a docker environment 
+
+final step is to push the code back to git,and then we can distribute the containers on various available environments
