@@ -118,3 +118,12 @@ docker stack services stack1
 docker stack deploy -c stack1.yaml stack1
 
 docker stack deploy -c stack2.yaml stack1
+
+#docker compose
+
+Docker compose is a tool for designing and running multi-container applications. Following Docker‘s one application per container it is difficult to create or to containerize applications that have multiple components or servers. Thanks to docker-compose you can simply define multiple services, link them together and run them.
+
+Imagine a WordPress installation, chances are you will need a web server such as Apache or Nginx. Then you will surely need a database such as MySQL or MariaDB. And optionally you might want a cache server such as Redis. Using Docker alone you can containerize each one of the components needed for a WordPress installation, but you can’t bundle them together in one container without breaking Docker’s philosophy.
+
+
+docker-compose up  { this for to start the container out of docker-compose.yaml }
