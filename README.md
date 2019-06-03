@@ -18,6 +18,17 @@ docker swarm leave { to be run on nodes leave the cluster }
 
 docker swarm leave --force { it used when that was last node to leave swarm cluster }
 
+# Docker services
+
+docker service runs only one image per services. docker services are mostly used in distributed application that uses micro services .
+but service confides the way that image runs which port it should use ,how many replicas it should run 
+
+Scaling a service changes the number of container instances running that piece of software, assigning more computing resources to the service in the process.
+
+it’s very easy to define, run, and scale services with the Docker platform -- just write a docker-compose.yml file
+
+docker service create --replicas 3 -p 8080:8080 --name appservers navya3416/jenkins:1.0
+
 
 docker service ls { to view the services }
 
